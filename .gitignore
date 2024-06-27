@@ -1,0 +1,4 @@
+**/__pycache__
+media/videos/*/partial_movie_files
+media/videos/*/*.srt
+media/voiceovers
