@@ -102,11 +102,11 @@ def extract_bee(image: str) -> None:
            masked_image
 
 if __name__ == '__main__':
-    simple_out = extract_bee('assets/raw_bee.webp')
+    simple_out = extract_bee('assets/scene1/raw_bee.webp')
     simple_out_names = ['yellow_mask.png', 'black_mask.png', 'white_mask.png', 'wings_mask.png', 'green_mask.png', 'non_removed_green.jpg', 'just_bee.jpg']
-    for i in range(len(simple_out)):cv2.imwrite(f'assets/{simple_out_names[i]}', simple_out[i])
+    for i in range(len(simple_out)):cv2.imwrite(f'assets/scene1/{simple_out_names[i]}', simple_out[i])
     
-    complex_out = extract_bee('assets/complex_image.webp')
+    complex_out = extract_bee('assets/scene1/complex_image.webp')
     complex_out_names = ['new_yellow_mask.png', 'new_black_mask.png', 'new_white_mask.png', 'new_wings_mask.png',
                           'new_green_mask.png', 'new_non_removed_green.jpg', 'masked_complex_image.jpg']
-    for i in range(len(complex_out)):cv2.imwrite(f'assets/{complex_out_names[i]}', complex_out[i])
+    for i in range(len(complex_out)):cv2.imwrite(f'assets/scene1/{complex_out_names[i]}', complex_out[i])
