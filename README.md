@@ -10,9 +10,9 @@
 - [License](#license)
 
 ## Introduction
-This repository is intended to serve as a base for any interested in what I call "mathnimations" (mathematical animations amde with python) to learn my best practices and replicate them for making their own videos.
+This repository aims to provide a foundation for anyone interested in what I call "mathnimations" (mathematical animations amde with python) to learn and adopt my best practices. 
 
-The code is written in Python and uses manim community as the animation engine.
+It utilizes Python code and leverages the Manim community as the animation engine.
 
 ## Features
 - My own manim SubScene structure.
