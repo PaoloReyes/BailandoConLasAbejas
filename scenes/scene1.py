@@ -8,7 +8,7 @@ class Scene1(SubScene):
         raw_bee = ImageMobject('assets/scene1/raw_bee.webp')
         raw_bee.z_index = 10
 
-        with self.voiceover('El primer intento para <bookmark mark="wait_time"/> tratar de identificar algun elemento'
+        with self.voiceover('El primer intento para <bookmark mark="wait_time"/>tratar de identificar algun elemento '
                             'en una imagen es a traves del uso de visión computacional tradicional.') as tracker:
             self.wait_until_bookmark('wait_time')
             self.play(FadeIn(raw_bee), 
@@ -69,7 +69,7 @@ class Scene1(SubScene):
             arrow.add_updater(lambda m, i=mask_idx: m.put_start_and_end_on(raw_bee.get_right(), masks[i].get_left()))
 
         with self.voiceover('Si mezclamos todas estas máscaras en una sola obtendremos los pixeles '
-                            'que contienen colores que generalmente pertencen a una abeja.') as tracker:
+                            'que contienen colores que generalmente pertenecen a una abeja.') as tracker:
             self.play(*[mask.animate.move_to(3.5*RIGHT).scale(0.5/0.3) for mask in masks], 
                       raw_bee.animate.scale(0.5/0.3), 
                       FadeOut(arrows), 
@@ -108,6 +108,8 @@ class Scene1(SubScene):
                             'Aunque no perfecta.') as tracker:
             self.play(FadeIn(green_mask), run_time=tracker.time_until_bookmark('green_pixels'))
             self.play(FadeOut(green_mask), FadeOut(non_removed_green), FadeIn(just_bee), run_time=tracker.time_until_bookmark('subtracting_mask'))
+
+        self.wait(0.5)
 
         # Why this is not a good approach
         complex_image = ImageMobject('assets/scene1/complex_image.webp').scale(1.25)

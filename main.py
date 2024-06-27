@@ -1,11 +1,12 @@
 from manim_voiceover import VoiceoverScene
 from manim_voiceover.services.coqui import CoquiService
+from manim_voiceover.services.recorder import RecorderService
 
-from scenes.scene1 import Scene1
+from scenes import *
 
 class MainScene(VoiceoverScene):
     def setup(self):
-        self.scenes = [Scene1]
+        self.scenes = [Scene2] # type: ignore
         self.set_speech_service(CoquiService(model_name='tts_models/es/css10/vits', transcription_model='base', gpu=True))
 
     def construct(self):
